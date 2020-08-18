@@ -12,7 +12,21 @@ public class SleepyHead {
 		/************************  SLEEPY HEAD  **************************/
 		boolean isWeekend;
 		// Write code to ask the user what day it is.
+		String day = JOptionPane.showInputDialog("What day is it?");
 		
+		if(day.equalsIgnoreCase("Saturday")) {
+			isWeekend = true;
+		} else if(day.equalsIgnoreCase("Sunday")) {
+			isWeekend = true;
+		} else {
+			isWeekend = false;
+		}
+		
+		if(isWeekend == true) {
+			JOptionPane.showMessageDialog(null, "You should sleep in");
+		} else if(isWeekend == false) {
+			JOptionPane.showMessageDialog(null, "Get out of bed and go to school!");
+		}
         
 		// Set the boolean isWeekend based on the value they enter
 		
@@ -24,8 +38,21 @@ public class SleepyHead {
 		
 		/************************   STAR STUDENT  **************************/
 
-		boolean passedExam;
+		boolean passedExam = false;
 		// Write code to ask the user what percentage they scored in their last exam
+		String userScore = JOptionPane.showInputDialog("What percentage did you score on your last exam?");
+		int score = Integer.parseInt(userScore);
+		if(score > 70) {
+			passedExam = true;
+		} else if(score < 70) {
+			passedExam = false;
+		}
+		
+		if(passedExam == true) {
+			JOptionPane.showMessageDialog(null, "Congradulations on passing!");
+		} else if(passedExam ==false) {
+			JOptionPane.showMessageDialog(null, "Better luck next time.");
+		}
 
 		
 		// If they scored more than 70, they passed the exam.
@@ -49,6 +76,7 @@ public class SleepyHead {
 			// If they answer "yes", change gameIsOver to true
 
 		}
+		JOptionPane.showMessageDialog(null, "Game is over");
 		// Tell the user "game is over" 
 		
 		
@@ -56,11 +84,25 @@ public class SleepyHead {
 		
 		boolean isRed;
 		// Ask the user what color to draw with. Based on their answer, set the isRed variable
+		String userColor = JOptionPane.showInputDialog("What color do you want me to draw with?");
 		
 		
 		boolean isSquare;		
 		// Now ask the user what shape to draw. Based on their answer, set the isSquare variable
+		String userShape = JOptionPane.showInputDialog("What shape do you want me to draw?");
+		if(userColor.equalsIgnoreCase("red") && userShape.equalsIgnoreCase("square")) {
+			isRed = true;
+			isSquare = true;
+		} else {
+			isRed = false;
+			isSquare = false;
+		}
 		
+		if(isRed == true && isSquare == true) {
+			drawRedSquare();
+		} else if(isRed == false && isSquare == false) {
+			JOptionPane.showMessageDialog(null, "I dont know how to draw that shape.");
+		}
 		
 		// Now you MUST use the && operator to join the booleans for this code. 
 		// Ask your teacher if you are not sure how
@@ -73,6 +115,16 @@ public class SleepyHead {
 	
 	static void drawRedSquare() {
 		Robot rob = new Robot();
+		rob.penDown();
+		rob.setPenColor(255, 0, 0);
+		rob.move(90);
+		rob.turn(90);
+		rob.move(90);
+		rob.turn(90);
+		rob.move(90);
+		rob.turn(90);
+		rob.move(90);
+		rob.turn(90);
 		// Complete the rest of this method
 	}	
 }
