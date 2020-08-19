@@ -9,7 +9,7 @@ void setup() {
   
   //Find a Where's Waldo picture and drop it into this sketch.     
   PImage waldo = loadImage("waldo.jpg"); // Change this to match your file name.
-  size(500, 500); // Change this to match the size of your waldo picture
+  size(900, 900); // Change this to match the size of your waldo picture
   image(waldo, 0, 0);
 
   /*
@@ -21,6 +21,11 @@ void setup() {
 void draw() {
       // Use this print statement to find out the coordinates of Waldo when you press the mouse
       // println("X: " + mouseX + " Y: " + mouseY); 
+ 
+      
+      if(mousePressed && mouseX==514 && mouseY==331){
+        print("Waldo found!");
+      }
 
       // If the mouse is on Waldo, print “Waldo found!”
 

@@ -4,7 +4,15 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class PiAloud {
-
+       public static void main(String[] args) {
+	String pi = "3.14159265358979323846";
+	System.out.print(pi.charAt(0));
+	System.out.print(pi.charAt(1));
+	
+	
+	
+	
+}
 	// 1. Make a main method and make sure your program can run
 
 	// 2. Make a String variable to hold 20 digits of Pi. You could use http://www.piday.org/million/ to get this.
