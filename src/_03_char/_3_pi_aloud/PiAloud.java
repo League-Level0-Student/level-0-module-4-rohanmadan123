@@ -6,9 +6,12 @@ import java.util.Scanner;
 public class PiAloud {
        public static void main(String[] args) {
 	String pi = "3.14159265358979323846";
-	System.out.print(pi.charAt(0));
-	System.out.print(pi.charAt(1));
+
 	
+	for(int i=0; i <pi.length(); i++) {
+		System.out.println(pi.charAt(i));
+		
+	}
 	
 	
 	
